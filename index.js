@@ -1,13 +1,15 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
-const generateMarkdown = require('./utils/generateMarkdown');
+const inquirer = require('inquirer'); // import inquirer for asking questions
+const fs = require('fs'); // import file system for writing files
+const generateMarkdown = require('./utils/generateMarkdown'); // import function to generate markdown content
+
 // TODO: Create an array of questions for user input
+// This array contains the questions that will be asked to the user
 const questions = [
     {
-        type: 'input',
-        name: 'title',
-        message: 'What is the title of your project?',
+        type: 'input', // this type of input is a text field
+        name: 'title', // the name/key for the response
+        message: 'What is the title of your project?', // message will be the question displayed to the user.
     },
     {
         type: 'input',
@@ -30,7 +32,7 @@ const questions = [
         message: 'If relevant, provide a list of your collaborators, with links to their GitHub profiles:',
     },
     {
-        type: 'list',
+        type: 'list', // this type of input will be a dropdown list
         name: 'license',
         message: 'Choose a license for your project:',
         choices: ['Apache 2.0', 'GNUv3.0', 'MIT', 'BSD 3-Clause', 'No License'],
@@ -64,22 +66,22 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
-        if (err) {
-            console.error('Error writing file:', err);
+    fs.writeFile(fileName, data, (err) => { // used fs.writeFile to write data to a file
+        if (err) { // checks if theres an error
+            console.error('Error writing file:', err); // logs the error
         } else {
-            console.log('README.md has been generated successfully!');
+            console.log('README.md has been generated successfully!'); // logs message if successful 
         }
     });
 }
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((answers) => {
-        const readmeContent = generateMarkdown(answers);
-        writeToFile('README.md', readmeContent);
+    inquirer.prompt(questions).then((answers) => { // use inquirer to ask the questions
+        const readmeContent = generateMarkdown(answers); // generate markdown content using the answers to the questions
+        writeToFile('README.md', readmeContent); // write generated content to README.md
     });
 }
 
 // Function call to initialize app
-init();
+init(); // starts the application
