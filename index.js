@@ -6,58 +6,58 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
-        name: 'Title',
+        name: 'title',
         message: 'What is the title of your project?',
     },
     {
         type: 'input',
-        name: 'Description',
+        name: 'description',
         message: 'Provide a short description of your project:',
     },
     {
         type: 'input',
-        name: 'Installation',
+        name: 'installation',
         message: 'Provide the steps needed to install your project:',
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'Provide instructions and examples for use:',
     },
     {
         type: 'input',
-        name: 'Credits',
+        name: 'credits',
         message: 'If relevant, provide a list of your collaborators, with links to their GitHub profiles:',
     },
     {
         type: 'list',
-        name: 'License',
+        name: 'license',
         message: 'Choose a license for your project:',
         choices: ['Apache 2.0', 'GNUv3.0', 'MIT', 'BSD 3-Clause', 'No License'],
     },
     {
         type: 'input',
-        name: 'Features',
+        name: 'features',
         message: 'If your project has features, list them here:',
     },
     {
         type: 'input',
-        name: 'Contributions',
+        name: 'contributions',
         message: 'If you would like other developers to contribute, provide guidelines for how to do so:',
     },
     {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'If you wrote tests for your application, provide examples on how to run them:',
     },
     {
         type: 'input',
-        name: 'GitHub',
+        name: 'gitHub',
         message: 'Enter your GitHub username:',
     },
     {
         type: 'input',
-        name: 'Email',
+        name: 'email',
         message: 'Enter your email address:',
     },
 ];
