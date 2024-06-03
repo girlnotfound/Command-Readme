@@ -39,11 +39,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'features',
-        message: 'If your project has features, list them here:',
-    },
-    {
-        type: 'input',
         name: 'contributions',
         message: 'If you would like other developers to contribute, provide guidelines for how to do so:',
     },
@@ -54,7 +49,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'gitHub',
+        name: 'github',
         message: 'Enter your GitHub username:',
     },
     {

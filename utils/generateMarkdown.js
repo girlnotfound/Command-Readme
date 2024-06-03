@@ -61,9 +61,6 @@ ${data.credits}
 ## License
 This project is licensed under the ${data.license} license.
 
-## Features
-${data.features}
-
 ## Contributions
 ${data.contributions}
 
